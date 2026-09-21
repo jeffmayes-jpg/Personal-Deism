@@ -1,0 +1,15 @@
+html, body { margin:0; padding:0; background:#fff; color:#000; }
+body { font-family:"Liberation Serif","Times New Roman",serif; font-size:12pt; }
+.document { margin:0; padding:0.79in; box-sizing:border-box; }
+.document-body { font-family:inherit; font-size:inherit; }
+.document-body p, .document-body table, .document-body ol, .document-body ul, .document-body blockquote { box-sizing:border-box; }
+.document-body p { margin:0; padding:0; }
+.document-body p.source-blank { margin:0; padding:0; height:auto; }
+.document-body ol, .document-body ul { margin-top:0; margin-bottom:0; }
+.document-body ol.core-tenets > li + li { margin-top:1em; }
+.document-body table { border-collapse:separate; border-spacing:0; max-width:100%; width:100%; }
+.document-body td, .document-body th { vertical-align:top; }
+.document-body img { max-width:100%; height:auto; }
+.document-nav { margin-top:2em; padding-top:1em; border-top:1px solid #888; font-size:12pt; line-height:1.35; }
+.document-nav a, .document-nav .current { color:#000080; text-decoration:underline; }
+.document-nav .current { color:#000; text-decoration:none; font-weight:bold; }
