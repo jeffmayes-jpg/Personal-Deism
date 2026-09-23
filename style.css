@@ -13,3 +13,28 @@ body { font-family:"Liberation Serif","Times New Roman",serif; font-size:12pt; }
 .document-nav { margin-top:2em; padding-top:1em; border-top:1px solid #888; font-size:12pt; line-height:1.35; }
 .document-nav a, .document-nav .current { color:#000080; text-decoration:underline; }
 .document-nav .current { color:#000; text-decoration:none; font-weight:bold; }
+
+/* Sectional highlighting: extend the existing source shading to the full paragraph. */
+.document-body p:has(> span[style*="background: #ffff00"]) {
+  background:#ffff00 !important;
+  font-style:italic;
+}
+.document-body p:has(> span[style*="background: #00ced1"]) {
+  background:#00ced1 !important;
+  font-style:italic;
+}
+.document-body p:has(> span[style*="background: #5f9ea0"]) {
+  background:#5f9ea0 !important;
+  font-style:italic;
+}
+
+/* Preserve the highlighted block across blank paragraphs between highlighted paragraphs. */
+.document-body p:has(> span[style*="background: #ffff00"]) + p:has(+ p > span[style*="background: #ffff00"]) {
+  background:#ffff00 !important;
+}
+.document-body p:has(> span[style*="background: #00ced1"]) + p:has(+ p > span[style*="background: #00ced1"]) {
+  background:#00ced1 !important;
+}
+.document-body p:has(> span[style*="background: #5f9ea0"]) + p:has(+ p > span[style*="background: #5f9ea0"]) {
+  background:#5f9ea0 !important;
+}
