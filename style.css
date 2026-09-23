@@ -70,3 +70,19 @@ body { font-family:"Liberation Serif","Times New Roman",serif; font-size:12pt; }
 .document-body p:has(> span[style*="background:#5f9ea0"]) + p:has(+ p > span[style*="background:#5f9ea0"]) {
   background:#5f9ea0 !important;
 }
+
+
+/* Color the source blank paragraphs that follow highlighted paragraphs so each
+   highlighted section remains visually continuous. */
+.document-body p:has(> span[style*="background: #ffff00"]) + p:has(> br),
+.document-body p:has(> span[style*="background:#ffff00"]) + p:has(> br) {
+  background:#ffff00 !important;
+}
+.document-body p:has(> span[style*="background: #00ced1"]) + p:has(> br),
+.document-body p:has(> span[style*="background:#00ced1"]) + p:has(> br) {
+  background:#00ced1 !important;
+}
+.document-body p:has(> span[style*="background: #5f9ea0"]) + p:has(> br),
+.document-body p:has(> span[style*="background:#5f9ea0"]) + p:has(> br) {
+  background:#5f9ea0 !important;
+}
