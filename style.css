@@ -14,75 +14,8 @@ body { font-family:"Liberation Serif","Times New Roman",serif; font-size:12pt; }
 .document-nav a, .document-nav .current { color:#000080; text-decoration:underline; }
 .document-nav .current { color:#000; text-decoration:none; font-weight:bold; }
 
-/* Sectional highlighting: preserve paragraph-level source highlighting. */
-.document-body p > span[style*="background: #ffff00"],
-.document-body p > span[style*="background:#ffff00"] {
-  display:block;
-  width:100%;
-  box-sizing:border-box;
-  background:#ffff00 !important;
-  font-style:italic;
-}
-.document-body p > span[style*="background: #00ced1"],
-.document-body p > span[style*="background:#00ced1"] {
-  display:block;
-  width:100%;
-  box-sizing:border-box;
-  background:#00ced1 !important;
-  font-style:italic;
-}
-.document-body p > span[style*="background: #5f9ea0"],
-.document-body p > span[style*="background:#5f9ea0"] {
-  display:block;
-  width:100%;
-  box-sizing:border-box;
-  background:#5f9ea0 !important;
-  font-style:italic;
-}
-
-/* Extend the same highlighting to the paragraph itself and to a blank paragraph
-   between two highlighted paragraphs. */
-.document-body p:has(> span[style*="background: #ffff00"]),
-.document-body p:has(> span[style*="background:#ffff00"]) {
-  background:#ffff00 !important;
-  font-style:italic;
-}
-.document-body p:has(> span[style*="background: #00ced1"]),
-.document-body p:has(> span[style*="background:#00ced1"]) {
-  background:#00ced1 !important;
-  font-style:italic;
-}
-.document-body p:has(> span[style*="background: #5f9ea0"]),
-.document-body p:has(> span[style*="background:#5f9ea0"]) {
-  background:#5f9ea0 !important;
-  font-style:italic;
-}
-
-.document-body p:has(> span[style*="background: #ffff00"]) + p:has(+ p > span[style*="background: #ffff00"]),
-.document-body p:has(> span[style*="background:#ffff00"]) + p:has(+ p > span[style*="background:#ffff00"]) {
-  background:#ffff00 !important;
-}
-.document-body p:has(> span[style*="background: #00ced1"]) + p:has(+ p > span[style*="background: #00ced1"]),
-.document-body p:has(> span[style*="background:#00ced1"]) + p:has(+ p > span[style*="background:#00ced1"]) {
-  background:#00ced1 !important;
-}
-.document-body p:has(> span[style*="background: #5f9ea0"]) + p:has(+ p > span[style*="background: #5f9ea0"]),
-.document-body p:has(> span[style*="background:#5f9ea0"]) + p:has(+ p > span[style*="background:#5f9ea0"]) {
-  background:#5f9ea0 !important;
-}
-
-
-/* Color the source blank paragraphs that follow highlighted paragraphs so each
-   highlighted section remains visually continuous. */
-.document-body p:has(> span[style*="background: #ffff00"]) + p:has(> br),
-.document-body p:has(> span[style*="background:#ffff00"]) + p:has(> br) {
-  background:#ffff00 !important;
-}
-.document-body p:has(> span[style*="background: #00ced1"]) + p:has(> br),
-.document-body p:has(> span[style*="background:#00ced1"]) + p:has(> br) {
-  background:#00ced1 !important;
-}
-.document-body p:has(> span[style*="background: #5f9ea0"]) + p:has(> br),
-.document-body p:has(> span[style*="background:#5f9ea0"]) + p:has(> br) {
-  background:#5f9ea0 !important;
-}
+/* Section backgrounds: Word source shading, preserved at paragraph level */
+.document-body p.pd-principle { background:#ffff00 !important; font-style:italic; }
+.document-body p.pd-qr { background:#00ced1 !important; font-style:italic; }
+.document-body p.pd-or { background:#5f9ea0 !important; font-style:italic; }
+.document-body p { box-sizing:border-box; }
